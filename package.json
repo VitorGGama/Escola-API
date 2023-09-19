@@ -1,0 +1,23 @@
+{
+  "type": "module",
+  "name": "escola-api",
+  "version": "1.0.0",
+  "description": "API NODEJS + EXPRESS com CRUD",
+  "main": "index.js",
+  "scripts": {
+    "test": "(https)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VitorGGama/Escola-API.git"
+  },
+  "author": "Vitor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VitorGGama/Escola-API/issues"
+  },
+  "homepage": "https://github.com/VitorGGama/Escola-API#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
