@@ -3,7 +3,7 @@ import mysql2 from 'mysql2';
 //Armazendo os dados da conexão
 const conexao = mysql2.createConnection({
     host : 'localhost',
-    usar : 'root',
+    user : 'root',
     password : '',
     database : 'escola'
 });

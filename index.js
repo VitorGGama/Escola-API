@@ -1,5 +1,13 @@
 import express from 'express';
+import { ler, inserir } from './src/aluno.js';
 const app = express();
+const porta = 8080;
+
+//add suporte ao formato json
+app.use(express.json());
+
+//adicionando suporte a dados
+app.use(express.urlencoded({ extended : true}));
 
 
 // Defina uma rota HTTP GET para a raiz ('/') do seu aplicativo.
@@ -10,15 +18,21 @@ app.get('/', (req, res) => {
 });
 
 app.get('/alunos', (req, res) =>{
-    res.send('dados todos os alunos');
+    //res.send('dados de todos os alunos');
+    ler(res);
 }); 
 
 app.get('/alunos/:id', (req, res) =>{
     res.send('exibindo dados de um aluno');
+    
 }); 
 
 app.post('/alunos', (req, res) =>{
-    res.send('inserindo um aluno');
+    //res.send('inserindo um aluno');
+    const novoAluno = req.body;
+    inserir(novoAluno, res);
+
+
 });
 
 app.patch('/alunos/:id', (req, res) =>{
@@ -33,7 +47,6 @@ app.delete('/alunos/:id', (req, res) =>{
 
 
 //Executando o servidor
-const porta = 8080;
 app.listen(porta, () => {
     console.log(`Servidor NodeJS rodando na porta ${porta}`);
 });
