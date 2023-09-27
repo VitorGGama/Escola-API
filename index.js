@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended : true}));
 // Quando alguém acessa a raiz do seu aplicativo no navegador ou faz uma solicitação GET para ele,
 // a função de retorno de chamada será executada.
 app.get('/', (req, res) => {
-    res.send('Raiz da API NodeJS + Express + mySql');
+    res.redirect(`https://documenter.getpostman.com/view/29885776/2s9YJZ34YM`);
 });
 
 app.get('/alunos', (req, res) =>{
