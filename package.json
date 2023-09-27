@@ -5,6 +5,7 @@
   "description": "API NODEJS + EXPRESS com CRUD",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "(https)"
   },
   "repository": {

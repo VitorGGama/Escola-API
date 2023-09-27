@@ -8,6 +8,15 @@ import mysql2 from 'mysql2';
     database : 'escola'
 });*/
 
+
+//Banco de dados db4free
+const conexao = mysql2.createConnection({
+    host : 'db4free.net',
+    user : 'vitorsenac',
+    password : 'Senac123',
+    database : 'apiescolavitor'
+});
+
 //Efetivando a conexão
 //conexao.connect();
 conexao.connect( erro => {
@@ -18,13 +27,7 @@ conexao.connect( erro => {
     }
 });
 
-//Banco de dados db4free
-const conexao = mysql2.createConnection({
-    host : 'db4free.net',
-    user : 'vitorsenac',
-    password : 'Senac123',
-    database : 'apiescolavitor'
-});
+
 
 export default conexao;
 
